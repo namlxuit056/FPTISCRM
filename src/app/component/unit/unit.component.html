@@ -1,0 +1,23 @@
+<form class="well" (submit)="addUnit($event)">
+    <div class="form-group">
+      <input type="text" [(ngModel)] = "id" name = "id" class="form-control" placeholder="ID">
+      <input type="text" [(ngModel)] = "name" name = "name" class="form-control" placeholder="Name">
+    </div>
+  </form>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let unit of units">
+            <th scope="row">1</th>
+            <td>{{unit.id}}</td>
+            <td>{{unit.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>

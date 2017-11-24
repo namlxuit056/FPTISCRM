@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        </head>
+<header>
+    <app-header></app-header>
+</header>
+
+<body>
+    <div class="card mb-3">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    <i class="fa fa-fw  fa-table" aria-hidden="true"></i> Data Employee
+                </div>
+                <div class="col">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+                <div>
+                        <a [routerLink]="['/addEmployee']">
+                            <i class="fa fa-fw fa-plus"></i>Add Employee</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <ngx-datatable class="bootstrap" [rows]="employees" [loadingIndicator]="loadingIndicator" [columns]="columns" [columnMode]="'force'"
+                    [headerHeight]="50" [footerHeight]="50" [limit]="10" [rowHeight]="'auto'" [reorderable]="reorderable"> </ngx-datatable>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<footer>
+    <app-footer></app-footer>
+</footer>
+
+</html>

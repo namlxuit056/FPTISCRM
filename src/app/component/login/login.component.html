@@ -1,0 +1,36 @@
+
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <header>
+   
+  </header>
+</html>
+<body class="bg-faded">
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">FPTIS CRM</div>
+      <div class="card-body">
+        <form class = "login" (submit) = "loginUser($event)">
+          <div class="form-group">
+            <label for="inputUserName">User Name</label>
+            <input class="form-control" id="inputUserName" name = "username" type="text" placeholder="Enter username" [(ngModel)]="username" required >
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input class="form-control" id="inputPassword" name = "userpassword" type="password" placeholder="Password" [(ngModel)]="userpassword" required>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember Password</label>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block" type="submit" (click)="loginUser($event)">Login</a>
+          <span id="login_failed" class="alertLogin" style="color:red"></span>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>

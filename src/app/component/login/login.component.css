@@ -1,0 +1,14 @@
+.card-login {
+    max-width: 25rem; }
+.card-body {
+        text-align: left}
+.card-header{
+    text-align: center;
+    font: 30px;
+    color: blue;
+    font-weight: bold
+        }
+.alertLogin{
+    text-align: center;
+}
+
